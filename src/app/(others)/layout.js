@@ -1,14 +1,16 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import ".././globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap", // Added this to stop the error A tree hydrated but some attributes of the server rendered HTML didn't match the client properties
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap", // Added this to stop the error A tree hydrated but some attributes of the server rendered HTML didn't match the client properties
 });
 
 export const metadata = {
