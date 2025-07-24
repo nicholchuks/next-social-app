@@ -1,6 +1,5 @@
 import User from "../models/user.model";
 
-// import { connect } from "../mongodb/mongoose";
 import { connect } from "../mongodb/mongoose";
 
 // get the user details from clerk and update it with the user model
