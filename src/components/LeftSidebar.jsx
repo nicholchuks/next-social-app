@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { FaXTwitter } from "react-icons/fa6";
 import { HiHome } from "react-icons/hi";
-// import {
-//   SignedIn,
-//   SignedOut,
-//   SignInButton,
-//   SignOutButton,
-// } from "@clerk/nextjs";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignOutButton,
+} from "@clerk/nextjs";
 
 export default function Sidebar() {
   return (
@@ -22,15 +22,20 @@ export default function Sidebar() {
           <HiHome className="w-7 h-7" />
           <span className="font-bold hidden xl:inline">Home</span>
         </Link>
-        <button className=" bg-blue-400 text-white rounded-full  hover:brightness-95 transition-all duration-200 w-48 h-9 shadow-md hidden xl:inline font-semibold">
-          {/* <SignedIn>
+        {/* <button className=" bg-blue-400 text-white rounded-full  hover:brightness-95 transition-all duration-200 w-48 h-9 shadow-md hidden xl:inline font-semibold">
+          <SignedIn>
             <SignOutButton />
           </SignedIn>
           <SignedOut>
             <SignInButton />
-          </SignedOut> */}
-          Sign In
-        </button>
+          </SignedOut>  // You dont next button inside a button element, it is an HTML error
+        </button> */}
+        <SignedIn>
+          <SignOutButton className=" bg-blue-400 text-white rounded-full  hover:brightness-95 transition-all duration-200 w-48 h-9 shadow-md hidden xl:inline font-semibold" />
+        </SignedIn>
+        <SignedOut>
+          <SignInButton className=" bg-blue-400 text-white rounded-full  hover:brightness-95 transition-all duration-200 w-48 h-9 shadow-md hidden xl:inline font-semibold" />
+        </SignedOut>
       </div>
     </div>
   );
